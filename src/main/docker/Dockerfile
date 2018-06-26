@@ -1,5 +1,5 @@
-FROM frolvlad/alpine-oraclejdk8:slim
-ADD docker_spring_boot.jar app.jar
-RUN sh -c 'touch /app.jar'
+FROM base/java8:1.0
+ADD docker_spring_boot.jar /opt/app.jar
+RUN sh -c 'touch /opt/app.jar'
 ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /opt/app.jar" ]
