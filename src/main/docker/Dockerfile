@@ -1,4 +1,4 @@
-FROM 10.1.9.199:5000/centos/javaweb:base
+FROM base/java8:1.0
 VOLUME /tmp
 ADD docker_spring_boot.jar app.jar
 RUN sh -c 'touch /app.jar'
