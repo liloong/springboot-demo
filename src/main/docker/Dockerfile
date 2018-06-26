@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM 10.1.9.199:5000/centos/javaweb:base
 VOLUME /tmp
 ADD docker_spring_boot.jar app.jar
 RUN sh -c 'touch /app.jar'
